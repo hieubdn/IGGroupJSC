@@ -1,18 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { Notification, UserLogout, ENG, VNM, SettingIcon } from "src/assets/svg.js";
 import { useLanguageToggle } from "src/hooks/useLanguageToggle";
 
 import "./headerService.scss";
+import { useNavigateWithLoading } from "src/hooks/useNavigateWithLoading";
 const HeaderService = () => {
   const { isVNM, toggleLanguage } = useLanguageToggle();
+  const navigateWithLoading = useNavigateWithLoading();
+
+  const handleNavigateToHome = () => {
+    navigateWithLoading('/');
+  };
 
   return (
     <header className="header-service">
       <div className="logo"> 
-        <Link className="header-service-link" to="/">
+        <div className="header-service-link" onClick={handleNavigateToHome}>
           IG Group JSC
-        </Link>
+        </div>
       </div>
 
       <div className="header-service-right-options">

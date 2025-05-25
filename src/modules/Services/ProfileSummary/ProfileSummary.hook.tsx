@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react'
 import './ProfileSummary.scss'
 import avt from 'src/assets/img/avt.png'
+import { ChangeCameraAvatar } from 'src/assets/svg'
 
 export default function ProfileSummary() {
   const [avatarImage, setAvatarImage] = useState<string | null>(null);
@@ -21,8 +22,11 @@ export default function ProfileSummary() {
 
   return (
     <div className="profile-summary">
-      <div className="avatar-container">
-        <img src={avatarImage || avt} alt="User avatar" onClick={() => fileInputRef.current?.click()} />
+      <div className="avatar-container" onClick={() => fileInputRef.current?.click()}>
+        <img src={avatarImage || avt} alt="User avatar" />
+        <div className="camera-icon">
+          <ChangeCameraAvatar width="24px" height="24px" />
+        </div>
         <input
           ref={fileInputRef}
           type="file"
