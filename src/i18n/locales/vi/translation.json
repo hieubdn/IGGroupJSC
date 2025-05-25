@@ -5,6 +5,19 @@
       "terms": "Điều khoản",
       "ads": "Quảng cáo",
       "login": "Đăng nhập"
+    },
+
+    "login": {
+      "title": "ĐĂNG NHẬP",
+      "company_name": "Tập đoàn IG Group",
+      "username_label": "Tên đăng nhập or email",
+      "username_placeholder": "Nhập tên đăng nhập hoặc email",
+      "password_label": "Mật khẩu",
+      "password_placeholder": "Nhập mật khẩu",
+      "forgot_password": "Quên mật khẩu",
+      "submit": "Đăng nhập",
+      "no_account": "Bạn chưa có tài khoản?",
+      "register_here": "Đăng ký tại đây"
     }
   }
   

@@ -5,6 +5,19 @@
       "terms": "Terms",
       "ads": "Ads",
       "login": "Login"
+    },
+    
+    "login": {
+      "title": "LOGIN",
+      "company_name": "IG Group JSC",
+      "username_label": "Username or email",
+      "username_placeholder": "Enter username or email",
+      "password_label": "Password",
+      "password_placeholder": "Enter password",
+      "forgot_password": "Forgot password",
+      "submit": "Login",
+      "no_account": "Don't have an account?",
+      "register_here": "Register here"
     }
   }
   

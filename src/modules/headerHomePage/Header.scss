@@ -34,6 +34,7 @@
       background: none;
       box-shadow: none;
       transition: all 0.2s ease-in-out;
+      cursor: pointer;
     }
 
     .header-link:hover {
@@ -46,23 +47,38 @@
     align-items: center;
     gap: 2rem;
 
-    .header-link {
+    .icon-wrapper {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
-      margin: 0 1rem;
-      font-weight: 700;
-      color: $color-text-alt;
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-    }
-    .header-link:hover {
-      box-shadow: 5px 5px 10px $color-text-alt;
-      transform: scale(1.02);
-      border-color: $color-border-alt;
-      border-radius: 4px;
-    }
+      justify-content: center;
+      width: 37px;
+      height: 37px;
+      border-radius: 50%;
+      border: 2px solid $color-border-alt;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      position: relative;
 
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        color: $color-text-alt;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &:hover {
+        border-color: $color-text-alt;
+        transform: scale(1.05);
+        
+        svg {
+          color: $color-text;
+        }
+      }
+    }
     .header-language {
       display: flex;
       align-items: center;

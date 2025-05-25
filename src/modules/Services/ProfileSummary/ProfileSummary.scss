@@ -4,17 +4,38 @@
   text-align: center;
 
   .avatar-container {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 15px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    cursor: pointer;
     border-radius: 50%;
-    overflow: hidden;
-    background: #f0f0f0;
+    overflow: visible;
+    border: 2px solid #ffffff;
 
     img {
       width: 100%;
       height: 100%;
+      border-radius: 50%;
       object-fit: cover;
+    }
+
+    .camera-icon {
+      position: absolute;
+      right: 3px;
+      bottom: 4px;
+      border-radius: 50%;
+      padding: 6px;
+      transform: translate(25%, 25%);
+      z-index: 2;
+      
+      svg {
+        width: 24px;
+        height: 24px;
+        fill: #ffffff;
+        background: $color-border-alt;
+        border-radius: 50%;
+      }
     }
   }
 
@@ -22,6 +43,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 5px;
+    margin-top: 20px;
   }
 
   .user-role {
