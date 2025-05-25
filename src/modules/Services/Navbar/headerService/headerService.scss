@@ -1,0 +1,118 @@
+@import "src/assets/scss/variables.scss";
+
+@keyframes shake {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(-10deg); }
+  50% { transform: rotate(10deg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes rotateRight {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateLeft {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+.header-service {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  background: $color-brg-header-alt;
+  color: $color-text;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  .logo {
+    .header-service-link {
+      color: $color-text;
+      text-decoration: none;
+      font-size: 25px;
+      font-weight: 700;
+    }
+  }
+
+  .header-service-right-options {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 41px;
+      height: 41px;
+      border-radius: 50%;
+      border: 2px solid $color-border-alt;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        color: $color-text-alt;
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.notification-icon {
+        svg {
+          color: $color-text;
+          animation: shake 0.5s ease-in-out infinite;
+        }
+      }
+
+      &.setting-icon {
+        svg {
+          transition: transform 0.7575s ease-in-out;
+        }
+        
+        &:hover {
+          svg {
+            color: $color-text;
+            animation: rotateRight 0.75s ease-in-out forwards;
+          }
+        }
+
+        &:not(:hover) {
+          svg {
+            animation: rotateLeft 0.5s ease-in-out forwards;
+          }
+        }
+      }
+
+      &:hover {
+        svg {
+          color: $color-text;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .header-service-language {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+      background: $color-brg;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
